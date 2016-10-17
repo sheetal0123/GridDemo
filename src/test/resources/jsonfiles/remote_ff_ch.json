@@ -1,0 +1,34 @@
+{
+  "capabilities":
+      [
+
+        {
+    		"browserName": "firefox",
+        	"maxInstances": 4,
+	        "acceptSslCerts": true,
+        	"javascriptEnabled": true,
+        	"platform": "Windows",
+          "seleniumProtocol": "WebDriver"
+        },
+        {
+    		"browserName": "chrome",
+        	"maxInstances": 4,
+	        "acceptSslCerts": true,
+        	"javascriptEnabled": true,
+        	"platform": "Windows",
+          "seleniumProtocol": "WebDriver"
+        }
+
+      ],
+  "configuration":
+  {
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "maxSession": 2,
+    "port": 5575,
+    "host": 192.168.2.148,
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": 4444,
+    "hubHost": 192.168.2.109
+  }
+}
