@@ -1,3 +1,12 @@
+#Grid can also be run using Docker with very few steps:
+docker run -d --name MyNewGridContainer -p 4444:4444 selenium/hub   | pull image "selenium/hub" and add into container "MyNewGridContainer"
+docker run -d -P --link MyNewGridContainer:hub selenium/node-firefox | pull firefox image and add into same container
+docker run -d -P --link MyNewGridContainer:hub selenium/node-chrome  | same as above
+
+above command will create a container and add hub, firefox and chrome inside it
+now we need to simply run testng file
+
+
 #Grid demo for web using Selenium + TestNG
 Imp: TestNG.xml or tests can be run from either hub or nodes
 As hub and nodes are connected through grid, so test request come to grid server
@@ -64,8 +73,6 @@ download SafariDriver.safariextz and double click file | http://elementalseleniu
 
 7. start ie drive
 java -jar selenium-server-standalone-2.53.1.jar -role node -hub http://192.168.2.109:4444/grid/register/ -Dwebdriver.ie.driver=IEDriverServer.exe -browser browserName="ie,platform=WINDOWS" -port 5557
-
-
 
 
 

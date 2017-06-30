@@ -23,7 +23,7 @@
 			</classes>
 		</test>
 
-
+<!--
 		<test name="Window+Firefox Test3">
 			<parameters>
 				<parameter name="platform" value="Windows" />
@@ -34,7 +34,7 @@
 			</classes>
 		</test>
 
-<!--
+
 
 		<test name="Window+Chrome Test4">
 			<parameters>
