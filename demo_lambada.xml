@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="ProdBug" parallel="tests">
+
+	<test name="FirefoxTest">
+		<parameter name="browser" value="firefox"/>
+		<parameter name="version" value="121.0"/>
+		<parameter name="platform" value="WIN10"/>
+		<classes>
+			<class name="selenium.SampleLambdaTest"/>
+		</classes>
+	</test>
+
+	<test name="ChromeTest">
+		<parameter name="browser" value="chrome"/>
+		<parameter name="version" value="70.0"/>
+		<parameter name="platform" value="WIN10"/>
+		<classes>
+			<class name="selenium.SampleLambdaTest"/>
+		</classes>
+	</test>
+
+	<test name="SafariTest">
+		<parameter name="browser" value="safari"/>
+		<parameter name="version" value="11.0"/>
+		<parameter name="platform" value="macos High Sierra"/>
+		<classes>
+			<class name="selenium.SampleLambdaTest"/>
+		</classes>
+	</test>
+
+</suite>

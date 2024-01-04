@@ -10,9 +10,11 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<selenium.version>2.53.1</selenium.version>
-		<testng.version>6.9.4</testng.version>
+		<selenium.version>3.141.59</selenium.version>
+		<testng.version>7.9.0</testng.version>
 		<java.client>4.0.0</java.client>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 	<dependencies>
 
