@@ -26,7 +26,7 @@ import org.testng.annotations.Test;
 public class SampleLambdaTest {
 
     public String username = "sheetal.singh8";  //TODO 1
-    public String accesskey = "ySKYxu5M3WUWgP6aSGQ6i5wdCSe8VN8YuxODvS5SZxYTAeY5V";      //TODO 2
+    public String accesskey = "";      //TODO 2
     public RemoteWebDriver driver = null;
     public String gridURL = "@hub.lambdatest.com/wd/hub"; 
     boolean status = false;
@@ -40,6 +40,7 @@ public class SampleLambdaTest {
         capabilities.setCapability("platform", platform); // If this cap isn't specified, it will just get the any available one
         capabilities.setCapability("build", "Prod Bug Build");
         capabilities.setCapability("name", "Sample Wiki Test");
+        capabilities.setCapability("geoLocation", "JP"); //Geo Location
         capabilities.setCapability("network", true); // To enable network logs
         capabilities.setCapability("visual", true); // To enable step by step screenshot
         capabilities.setCapability("video", true); // To enable video recording
@@ -65,7 +66,8 @@ public class SampleLambdaTest {
             driver.findElement(By.xpath("//*[@id=\"searchform\"]/div/button")).click();
             Thread.sleep(2000);
             System.out.println("### "+driver.getCurrentUrl());
-            
+            driver.get("https://www.google.com/");
+            Thread.sleep(2000);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
